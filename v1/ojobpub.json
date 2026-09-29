@@ -131,10 +131,21 @@
                     "type": "string",
                     "enum": ["permanent", "contract", "internship", "apprenticeship", "temporary", "volunteer", "freelance"]
                 },
+                "jobPosition": {
+                    "description": "Position of the job",
+                    "type": "string",
+                    "maxLength": 255
+                },
                 "experienceLevel": {
                     "description": "Experience level required for the job",
                     "type": "string",
                     "enum": ["junior", "mid", "senior", "lead", "manager", "director", "executive"]
+                },
+                "experienceMonths": {
+                    "description": "Required experience in months for the job",
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 9999
                 },
                 "workLoad": {
                     "description": "Expected workload in percentage for the job",
@@ -158,6 +169,22 @@
                     "description": "Type of work for the job",
                     "type": "string",
                     "enum": ["remote", "on-site", "hybrid"]
+                },
+                "workTypeBalance": {
+                    "description": "Balance percentage between on-site and remote of the job, on-site is 0",
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 100
+                },
+                "workApplicationDocuments": {
+                    "description": "Required documents to apply for the job",
+                    "type": "string",
+                    "maxLength": 1000
+                },
+                "workApplicationCitizenship": {
+                    "description": "Required citizenship(s) to apply for the job",
+                    "type": "string",
+                    "maxLength": 1000
                 },
                 "salary": {
                     "description": "Salary range for the job",
